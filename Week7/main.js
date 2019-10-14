@@ -1,5 +1,4 @@
-const body = document.getElementsByTagName('body')[0]
-const div = document.createElement('div')
+
 class Movie {
   constructor(title, director) {
     // add your code here
@@ -90,7 +89,19 @@ myMovie.addStar(firstActor);
   console.log(myMovie)
  console.log(firstActor.getAge())
  // create and add more staff members
-//   // Make sure that the following actions work.
+ const Nawal = new StaffMember("Nawal", "Mother", 1966)
+ const Rabaha = new StaffMember("Rabaha", "sister", 1993)
+ const Andrely = new StaffMember("Andrely", "Friend", 1998)
+ console.log(Nawal, Rabaha)
+ console.log(Andrely.getName())
+//   // Make sure that  the following actions work.
 console.log(myMovie.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`));
 const director = myMovie.getDirector();
 console.log(`Director: ${director.getName()}`);
+document.querySelector("h1").innerHTML=(myMovie.getStars().map(actor => `${actor.getName()} ${actor.getAge()}`))
+
+const director1 = myMovie.director.getName();
+document.querySelector("h2").innerHTML=("Director: " + director1)
+
+const director2 = myMovie.Nawal;
+document.querySelector("p").innerHTML=("Actor: " + Andrely.getName())
